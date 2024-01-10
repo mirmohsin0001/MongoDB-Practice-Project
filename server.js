@@ -2,11 +2,10 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+require("dotenv").config();
 
 mongoose
-  .connect(
-    "mongodb+srv://root:root@book-store-mern.mfuqgka.mongodb.net/database-practice-project"
-  )
+  .connect(process.env.MongoDB_URL)
   .then(() => {
     console.log("database connected!");
   })
