@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 
 mongoose
-  .connect(process.env.MongoDB_URL)
+  .connect("mongodb+srv://root:root@book-store-mern.mfuqgka.mongodb.net/database-practice-project")
   .then(() => {
     console.log("database connected!");
   })
